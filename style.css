@@ -1,6 +1,6 @@
 :root {
     --primary: #1a1a1a;
-    --accent: #2ab7ca; /* Color turquesa como el agua del pantano */
+    --accent: #2ab7ca; 
     --text-light: #f4f4f4;
     --text-dark: #333;
     --bg-light: #f9f9f9;
@@ -17,7 +17,6 @@ body {
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* Navbar */
 .navbar {
     background: rgba(26, 26, 26, 0.95);
     padding: 20px 0;
@@ -28,7 +27,7 @@ body {
 }
 
 .navbar .container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.5rem; letter-spacing: 2px; }
+.logo { font-size: 1.5rem; letter-spacing: 2px; font-weight: 700; }
 .logo span { color: var(--accent); }
 
 nav ul { display: flex; list-style: none; }
@@ -38,10 +37,10 @@ nav ul li a:hover { color: var(--accent); }
 
 .nav-btn { border: 1px solid var(--accent); padding: 8px 15px; border-radius: 5px; }
 
-/* Hero Section - AQUÍ ES DONDE LUCE LA PORTADA */
+/* HERO SECTION CON TU IMAGEN SUBIDA */
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('portada.jpg.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -55,24 +54,26 @@ nav ul li a:hover { color: var(--accent); }
 .hero .highlight { color: var(--accent); }
 .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 700px; margin-inline: auto; }
 
-.btn-main { background: var(--accent); color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-right: 15px; transition: 0.3s; }
-.btn-sub { border: 2px solid white; color: white; padding: 13px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
-.btn-main:hover { transform: scale(1.05); }
+.btn-main { background: var(--accent); color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-right: 15px; display: inline-block; }
+.btn-sub { border: 2px solid white; color: white; padding: 13px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; }
 
-/* Sections */
 .section { padding: 80px 0; text-align: center; }
-.section-header h3 { font-size: 2.5rem; margin-bottom: 10px; }
 .bg-light { background: var(--bg-light); }
 
-.video-wrapper { margin-top: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); border-radius: 10px; overflow: hidden; }
+.video-wrapper { 
+    max-width: 800px; 
+    margin: 40px auto; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
 
-/* Pricing Card */
 .pricing-card { background: white; padding: 40px; border-radius: 15px; max-width: 400px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 .price { font-size: 2.5rem; font-weight: bold; color: var(--primary); margin: 20px 0; }
-.price span { font-size: 1rem; color: #777; }
 .features { text-align: left; margin-bottom: 30px; list-style: none; }
 .features li { margin-bottom: 10px; }
+.features li:before { content: "✓"; color: var(--accent); margin-right: 10px; font-weight: bold; }
 
-.btn-premium { width: 100%; background: var(--primary); color: white; border: none; padding: 15px; font-size: 1.1rem; font-weight: bold; border-radius: 5px; cursor: pointer; }
+.btn-premium { width: 100%; background: var(--primary); color: white; border: none; padding: 15px; font-weight: bold; border-radius: 5px; cursor: pointer; }
 
 footer { background: var(--primary); color: white; padding: 40px 0; text-align: center; }
