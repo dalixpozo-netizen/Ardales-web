@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ardales | El Paraíso Escondido</title>
+    <title>Ardales VIP | Tourist Information</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="navbar">
         <div class="container">
-            <h1 class="logo">ARDALES<span>.</span></h1>
+            <div class="logo-area">
+                <img src="logoardalesvip.png" alt="Ardales VIP" class="nav-logo">
+            </div>
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#experiencia">Experiencia</a></li>
-                    <li><a href="#reservas" class="nav-btn">Reservas</a></li>
+                    <li><a href="#que-incluye">Contenido VIP</a></li>
+                    <li class="lang-bar">🇪🇸 🇬🇧 🇩🇪 🇫🇷</li>
+                    <li><a href="#registro" class="btn-gold-nav">ACCESO GUÍA</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,48 +29,69 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-buttons">
-                    <a href="#reservas" class="btn-main">Planear Visita</a>
-                    <a href="#experiencia" class="btn-sub">Ver Video</a>
+                    <a href="#registro" class="btn-gold-main">OBTENER ACCESO VIP</a>
+                    <a href="#experiencia" class="btn-white-sub">Ver Demo</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experiencia" class="section">
+    <section id="que-incluye" class="section-premium">
         <div class="container">
-            <div class="section-header">
-                <h3>Siente el Vértigo, Vive la Historia</h3>
-                <p>Descubre por qué el Caminito del Rey es el sendero más espectacular de Europa.</p>
+            <div class="section-title">
+                <h2>Tu Experience Premium en Ardales</h2>
+                <div class="gold-line"></div>
+                <p>No seas un turista más, accede a la información que los locales mantienen en privado.</p>
             </div>
-            <div class="video-container">
-                <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/u5esmWQrbl0" title="Caminito del Rey 4K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <div class="grid-vip">
+                <div class="vip-card">
+                    <span class="vip-icon">🎧</span>
+                    <h4>Audioguías 4 Idiomas</h4>
+                    <p>No leas, escucha. La historia del Caminito y Ardales en tu lengua materna.</p>
+                </div>
+                <div class="vip-card">
+                    <span class="vip-icon">📍</span>
+                    <h4>Rutas Secretas</h4>
+                    <p>Los mejores rincones del Castillo y el Pueblo sin las multitudes habituales.</p>
+                </div>
+                <div class="vip-card">
+                    <span class="vip-icon">🍴</span>
+                    <h4>Gastronomía Real</h4>
+                    <p>Descuentos exclusivos en los sitios donde realmente comemos los de aquí.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="reservas" class="section bg-light">
+    <section id="experiencia" class="video-section">
         <div class="container">
-            <div class="pricing-card">
-                <div class="card-header">
-                    <h4>Aventura Total</h4>
-                    <p class="price">45€<span>/persona</span></p>
-                </div>
-                <ul class="features">
-                    <li>✓ Entrada al Caminito del Rey.</li>
-                    <li>✓ Guía oficial multilingüe.</li>
-                    <li>✓ Visita guiada a Ardales.</li>
-                    <li>✓ Almuerzo de productos locales.</li>
+            <div class="video-container-premium">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/u5esmWQrbl0" title="Ardales VIP Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="registro" class="pricing-section">
+        <div class="container">
+            <div class="card-checkout">
+                <div class="card-tag">RECOMENDADO</div>
+                <h3>Full VIP Pass</h3>
+                <div class="card-price">9,99€<span>/pago único</span></div>
+                <ul class="card-list">
+                    <li>✓ Guía Completa Multi-idioma</li>
+                    <li>✓ Mapa interactivo inteligente</li>
+                    <li>✓ Soporte Directo vía WhatsApp</li>
+                    <li>✓ Actualizaciones de por vida</li>
                 </ul>
-                <button class="btn-premium" onclick="alert('Redirigiendo al sistema de reservas...')">Reservar Mi Plaza</button>
+                <button class="btn-buy" onclick="alert('Redirigiendo a pasarela de pago segura...')">COMPRAR PASE VIP</button>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Ardales-Web | Destino Turístico Inteligente</p>
+            <p>&copy; 2026 Ardales VIP Tourist Information | El poder de los idiomas al servicio del turismo.</p>
         </div>
     </footer>
 
