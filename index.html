@@ -3,97 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ardales VIP | Tourist Information</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Ardales VIP | Tu Embajador Local</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%); }
+        .vip-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 175, 55, 0.2); transition: 0.3s; }
+        .vip-card:hover { border-color: #d4af37; background: rgba(212, 175, 55, 0.05); }
+        .gold-text { color: #d4af37; }
+    </style>
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#que-incluye">Contenido VIP</a></li>
-                    <li class="lang-bar">🇪🇸 🇬🇧 🇩🇪 🇫🇷</li>
-                    <li><a href="#registro" class="btn-gold-nav">ACCESO GUÍA</a></li>
-                </ul>
-            </nav>
+    <header class="hero-gradient p-8 text-center border-b border-gray-800">
+        <h1 class="text-4xl font-bold mb-2">Ardales <span class="gold-text">VIP</span></h1>
+        <p class="text-gray-400 text-sm mb-6 uppercase tracking-widest">Tu Embajador Turístico Personal</p>
+        <div class="max-w-md mx-auto bg-white/5 p-4 rounded-xl border border-white/10">
+            <p class="text-sm italic">"No vengas solo de paso. Vive Ardales como un local. Información práctica, cartas en tu idioma y recomendaciones exclusivas."</p>
         </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-logo-badge">
-                <img src="logoardalesvip.png" alt="Ardales VIP Logo" class="badge-img">
-            </div>
-
-            <div class="hero-content">
-                <div class="hero-buttons">
-                    <a href="#registro" class="btn-gold-main">OBTENER ACCESO VIP</a>
-                    <a href="#experiencia" class="btn-white-sub">Ver Video</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="que-incluye" class="section-premium">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tu Experience Premium en Ardales</h2>
-                <div class="gold-line"></div>
-                <p>No seas un turista más, accede a la información exclusiva en tu propio idioma.</p>
+    <main class="p-6 max-w-lg mx-auto">
+        
+        <h2 class="text-gray-500 text-xs font-bold uppercase mb-4 mt-2">Explora el pueblo</h2>
+        
+        <div class="grid grid-cols-2 gap-4">
+            <div class="vip-card rounded-2xl p-6 flex flex-col items-center cursor-pointer">
+                <i class="fas fa-bed text-2xl gold-text mb-3"></i>
+                <span class="text-sm font-semibold">Dormir</span>
             </div>
             
-            <div class="grid-vip">
-                <div class="vip-card">
-                    <span class="vip-icon">🎧</span>
-                    <h4>Audioguías 4 Idiomas</h4>
-                    <p>La historia de Ardales y el Caminito en tu lengua materna.</p>
-                </div>
-                <div class="vip-card">
-                    <span class="vip-icon">📍</span>
-                    <h4>Rutas Secretas</h4>
-                    <p>Lugares mágicos fuera de los mapas turísticos convencionales.</p>
-                </div>
-                <div class="vip-card">
-                    <span class="vip-icon">🍴</span>
-                    <h4>Gastronomía Real</h4>
-                    <p>Donde comen los locales. Sin trampas para turistas.</p>
+            <div class="vip-card rounded-2xl p-6 flex flex-col items-center cursor-pointer">
+                <i class="fas fa-utensils text-2xl gold-text mb-3"></i>
+                <span class="text-sm font-semibold">Comer</span>
+            </div>
+
+            <div class="vip-card rounded-2xl p-6 flex flex-col items-center cursor-pointer">
+                <i class="fas fa-shopping-bag text-2xl gold-text mb-3"></i>
+                <span class="text-sm font-semibold">Compras</span>
+            </div>
+
+            <div class="vip-card rounded-2xl p-6 flex flex-col items-center cursor-pointer">
+                <i class="fas fa-mountain text-2xl gold-text mb-3"></i>
+                <span class="text-sm font-semibold">Ocio</span>
+            </div>
+        </div>
+
+        <div class="mt-8 bg-[#d4af37]/10 p-4 rounded-xl border border-[#d4af37]/30">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-bell gold-text"></i>
+                <div>
+                    <h3 class="text-sm font-bold">Asistente de Viaje</h3>
+                    <p class="text-[11px] text-gray-400">Recibe recordatorios personalizados de tus reservas y eventos.</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="experiencia" class="video-section">
-        <div class="container">
-            <div class="video-container-premium">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/u5esmWQrbl0" title="Ardales VIP Video" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <section id="registro" class="pricing-section">
-        <div class="container">
-            <div class="card-checkout">
-                <div class="card-tag">SISTEMA AUTOMATIZADO</div>
-                <h3>Full VIP Pass</h3>
-                <div class="card-price">9,99€<span>/pago único</span></div>
-                <ul class="card-list">
-                    <li>✓ Guía Digital en 4 idiomas</li>
-                    <li>✓ Mapa interactivo inteligente</li>
-                    <li>✓ Soporte Directo vía WhatsApp</li>
-                    <li>✓ Acceso instantáneo tras pago</li>
-                </ul>
-                <button class="btn-buy" onclick="alert('Conectando con pasarela de pago...')">COMPRAR PASE VIP</button>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Ardales VIP Tourist Information | Ingresos Pasivos Automatizados</p>
-        </div>
+    <footer class="mt-12 p-6 text-center border-t border-gray-800">
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest">Powered by Ardales VIP &copy; 2026</p>
     </footer>
 
 </body>
