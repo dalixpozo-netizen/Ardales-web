@@ -9,13 +9,13 @@
     <style>
         body { background-color: #000; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
         
-        /* CABECERA: INTEGRACIÓN DEL COLLAGE FINAL */
+        /* CABECERA: AJUSTADA A COLLAGE_FINAL.PNG */
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), 
-                        url('collage_final.jpg');
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), 
+                        url('collage_final.png'); /* Corregido a .png */
             background-size: cover;
             background-position: center; 
-            height: 420px; 
+            height: 450px; /* Un poco más de altura para que se vean bien las fotos del collage */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -91,7 +91,7 @@
         <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter text-shadow-vip">
             BIENVENIDO A <br><span class="gold-text">ARDALES</span>
         </h1>
-        <p class="text-xs md:text-sm italic text-gray-100 mt-4 font-bold tracking-[3px] text-shadow-vip uppercase bg-black/30 px-4 py-1 rounded-full">
+        <p class="text-xs md:text-sm italic text-gray-100 mt-4 font-bold tracking-[3px] text-shadow-vip uppercase bg-black/40 px-4 py-1 rounded-full">
             Tu embajador personal en tiempo real.
         </p>
     </header>
@@ -159,7 +159,7 @@
     </main>
 
     <div class="fixed bottom-6 left-0 right-0 px-6 z-50">
-        <button class="btn-vip py-4 px-6 rounded-xl w-full flex justify-between items-center uppercase text-sm tracking-tighter shadow-black shadow-2xl active:scale-95 transition-all">
+        <button class="btn-vip py-4 px-6 rounded-xl w-full flex justify-between items-center uppercase text-sm tracking-tighter shadow-black shadow-2xl">
             <span class="font-black">Activar mi Pase VIP</span>
             <i class="fas fa-key text-lg"></i>
         </button>
