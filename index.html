@@ -7,134 +7,150 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { background-color: #000; color: white; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #000; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
         
-        /* Recuperando tus fondos visuales */
+        /* CIRUGÍA DE CABECERA: Adaptación perfecta de portadanew.jpg */
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=2070&auto=format&fit=crop');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), 
+                        url('portadanew.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: center 30%; /* Ajusta el enfoque de la foto */
+            height: 350px; /* Altura ideal para móviles/web en formato panorámico */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
         }
 
         .category-card {
-            height: 160px;
-            border-radius: 15px;
+            height: 180px;
+            border-radius: 12px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 15px;
+            padding: 20px;
             background-size: cover;
             background-position: center;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            margin-bottom: 15px;
         }
 
         .category-card::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 100%);
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0.1) 100%);
         }
 
         .card-content { z-index: 10; }
         .gold-text { color: #d4af37; }
-        .gold-border { border-color: #d4af37; }
         
         .vip-tag {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 15px;
+            right: 15px;
             background: #d4af37;
             color: black;
             font-size: 10px;
-            font-weight: bold;
-            padding: 2px 8px;
-            border-radius: 5px;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 4px;
             z-index: 20;
+            text-transform: uppercase;
+        }
+
+        .btn-vip {
+            background: #d4af37;
+            color: black;
+            font-weight: 900;
         }
     </style>
 </head>
-<body class="pb-24">
+<body class="pb-28">
 
-    <nav class="p-4 flex justify-between items-center bg-black/80 sticky top-0 z-50">
-        <div class="font-bold tracking-tighter uppercase border border-white px-2">Ardales <span class="gold-text">VIP</span></div>
-        <div class="flex gap-4">
-            <span class="cursor-pointer">🇪🇸</span>
-            <span class="opacity-50 cursor-pointer text-sm">ENG</span>
-            <span class="opacity-50 cursor-pointer text-sm">DEU</span>
+    <nav class="p-4 flex justify-between items-center bg-black sticky top-0 z-50 border-b border-white/10">
+        <img src="logoardalesvip.png" alt="Ardales VIP" class="h-6">
+        <div class="flex gap-4 text-xs font-bold">
+            <span class="gold-text">ES</span>
+            <span class="opacity-40">ENG</span>
+            <span class="opacity-40">DEU</span>
         </div>
     </nav>
 
-    <header class="hero-bg h-64 flex flex-col justify-center items-center text-center px-6">
-        <h1 class="text-3xl font-black uppercase mb-2">Bienvenido a <span class="gold-text">Ardales</span></h1>
-        <p class="text-sm italic text-gray-200">Tu información turística práctica y en tiempo real.</p>
+    <header class="hero-bg px-6">
+        <h1 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">
+            BIENVENIDO A <span class="gold-text">ARDALES</span>
+        </h1>
+        <p class="text-xs md:text-sm italic text-gray-200 mt-2 font-light tracking-wide shadow-black drop-shadow-lg">
+            Tu información turística práctica y en tiempo real.
+        </p>
     </header>
 
-    <main class="p-4 space-y-6">
+    <main class="p-4">
 
-        <section>
-            <h2 class="text-xs font-bold text-gray-500 uppercase tracking-[3px] mb-3 ml-1">Próximos Eventos</h2>
-            <div class="bg-zinc-900 border-l-4 gold-border p-4 rounded-r-lg shadow-lg">
-                <div class="flex justify-between items-start">
+        <section class="mb-8">
+            <h2 class="text-[10px] font-bold text-gray-500 uppercase tracking-[4px] mb-4">Próximos Eventos</h2>
+            <div class="bg-zinc-900/80 border-l-4 border-[#d4af37] p-5 rounded-r-xl">
+                <div class="flex justify-between items-center">
                     <div>
-                        <p class="text-sm font-bold">Apertura Piscina Municipal</p>
+                        <p class="text-sm font-bold text-white uppercase tracking-tight">Apertura Piscina Municipal</p>
                         <p class="text-[11px] text-gray-400 mt-1">Mañana a las 11:00h</p>
                     </div>
-                    <i class="fas fa-bell gold-text"></i>
+                    <i class="fas fa-bell gold-text text-lg"></i>
                 </div>
             </div>
         </section>
 
-        <section class="grid grid-cols-1 gap-4">
-            
-            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop');">
-                <span class="vip-tag">CARTAS DIGITALES</span>
+        <section>
+            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop');">
+                <span class="vip-tag">Cartas Digitales</span>
                 <div class="card-content">
-                    <h3 class="text-xl font-bold uppercase italic text-white"><i class="fas fa-utensils gold-text mr-2"></i>Dónde Comer</h3>
-                    <p class="text-[11px] text-gray-300">Restaurantes, bares de tapas y platos típicos.</p>
+                    <h3 class="text-2xl font-black uppercase italic text-white leading-none">
+                        <i class="fas fa-utensils gold-text mr-2 text-xl"></i>Dónde Comer
+                    </h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Restaurantes, bares de tapas y platos típicos.</p>
                 </div>
             </div>
 
-            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop');">
+            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop');">
                 <div class="card-content">
-                    <h3 class="text-xl font-bold uppercase italic text-white"><i class="fas fa-bed gold-text mr-2"></i>Alojamiento</h3>
-                    <p class="text-[11px] text-gray-300">Hoteles, casas rurales y apartamentos.</p>
+                    <h3 class="text-2xl font-black uppercase italic text-white leading-none">
+                        <i class="fas fa-bed gold-text mr-2 text-xl"></i>Alojamiento
+                    </h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Hoteles, casas rurales y apartamentos.</p>
                 </div>
             </div>
 
-            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1601599561213-832382fd07ba?q=80&w=2070&auto=format&fit=crop');">
-                <span class="vip-tag">DESCUENTOS</span>
+            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1628102422617-3c5200bec344?q=80&w=2070&auto=format&fit=crop');">
+                <span class="vip-tag">Ofertas</span>
                 <div class="card-content">
-                    <h3 class="text-xl font-bold uppercase italic text-white"><i class="fas fa-bag-shopping gold-text mr-2"></i>Productos Locales</h3>
-                    <p class="text-[11px] text-gray-300">Aceites, dulces y comercios de Ardales.</p>
+                    <h3 class="text-2xl font-black uppercase italic text-white leading-none">
+                        <i class="fas fa-shopping-bag gold-text mr-2 text-xl"></i>Comercios
+                    </h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Productos locales y tiendas de Ardales.</p>
                 </div>
             </div>
 
-            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1503220317375-aaad61436b1b?q=80&w=2070&auto=format&fit=crop');">
+            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop');">
                 <div class="card-content">
-                    <h3 class="text-xl font-bold uppercase italic text-white"><i class="fas fa-mountain-sun gold-text mr-2"></i>Ocio y Rutas</h3>
-                    <p class="text-[11px] text-gray-300">Cuevas, Caminito del Rey y embalses.</p>
+                    <h3 class="text-2xl font-black uppercase italic text-white leading-none">
+                        <i class="fas fa-map-marked-alt gold-text mr-2 text-xl"></i>Ocio y Rutas
+                    </h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Caminito del Rey, Cuevas y Pantanos.</p>
                 </div>
-            </div>
-
-        </section>
-
-        <section class="bg-zinc-900 p-4 rounded-xl flex items-center gap-4 border border-zinc-800">
-            <div class="text-3xl gold-text"><i class="fas fa-landmark"></i></div>
-            <div>
-                <h4 class="text-sm font-bold uppercase">Información Pública</h4>
-                <p class="text-[10px] text-gray-500 italic text-pretty">Teléfonos de salud, farmacias y servicios municipales.</p>
             </div>
         </section>
 
     </main>
 
-    <div class="fixed bottom-6 left-0 right-0 px-6 z-[100]">
-        <button class="bg-[#d4af37] text-black font-black py-4 px-6 rounded-xl w-full shadow-[0_10px_30px_rgba(212,175,55,0.3)] uppercase text-sm tracking-tighter flex justify-between items-center">
+    <div class="fixed bottom-6 left-0 right-0 px-6 z-50">
+        <button class="btn-vip py-4 px-6 rounded-lg w-full shadow-2xl flex justify-between items-center uppercase text-sm tracking-tighter">
             <span>Activar Pase del Visitante</span>
-            <i class="fas fa-id-card"></i>
+            <i class="fas fa-id-card-alt text-lg"></i>
         </button>
     </div>
 
