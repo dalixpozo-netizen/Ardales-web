@@ -9,19 +9,20 @@
     <style>
         body { background-color: #000; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
         
-        /* CABECERA CON LA NUEVA IMAGEN PROFESIONAL */
+        /* CABECERA CON TU NUEVO COLLAGE */
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), 
-                        url('Portadadef.jpg');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), 
+                        url('collage_final.jpg');
             background-size: cover;
-            background-position: center 40%; 
-            height: 380px; 
+            background-position: center; 
+            height: 400px; /* Un poco más de altura para que luzca el collage */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             position: relative;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
         }
 
         .category-card {
@@ -67,11 +68,11 @@
             background: #d4af37;
             color: black;
             font-weight: 900;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
 
-        /* Sombra especial para legibilidad sobre foto profesional */
         .text-shadow-vip {
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            text-shadow: 0px 4px 10px rgba(0,0,0,0.9);
         }
     </style>
 </head>
@@ -80,44 +81,49 @@
     <nav class="p-4 flex justify-between items-center bg-black sticky top-0 z-50 border-b border-white/10">
         <img src="logoardalesvip.png" alt="Ardales VIP" class="h-6">
         <div class="flex gap-4 text-xs font-bold">
-            <span class="gold-text">ES</span>
+            <span class="gold-text border-b border-[#d4af37]">ES</span>
             <span class="opacity-40">ENG</span>
             <span class="opacity-40">DEU</span>
         </div>
     </nav>
 
     <header class="hero-bg px-6">
-        <h1 class="text-3xl md:text-5xl font-black uppercase tracking-tighter text-shadow-vip">
-            BIENVENIDO A <span class="gold-text">ARDALES</span>
+        <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter text-shadow-vip leading-none">
+            BIENVENIDO A <br><span class="gold-text">ARDALES</span>
         </h1>
-        <p class="text-xs md:text-sm italic text-gray-100 mt-2 font-medium tracking-wide text-shadow-vip">
-            Tu información turística práctica y en tiempo real.
+        <p class="text-xs md:text-sm italic text-gray-100 mt-4 font-medium tracking-[2px] text-shadow-vip uppercase">
+            Tu embajador personal en tiempo real.
         </p>
     </header>
 
     <main class="p-4">
 
-        <section class="mb-8">
-            <h2 class="text-[10px] font-bold text-gray-500 uppercase tracking-[4px] mb-4">Próximos Eventos</h2>
-            <div class="bg-zinc-900/80 border-l-4 border-[#d4af37] p-5 rounded-r-xl shadow-lg">
+        <section class="mb-8 mt-4">
+            <div class="flex items-center gap-2 mb-4">
+                <div class="h-[1px] w-6 bg-[#d4af37]"></div>
+                <h2 class="text-[10px] font-bold text-gray-500 uppercase tracking-[4px]">Próximas Alertas</h2>
+            </div>
+            <div class="bg-zinc-900/90 border-l-4 border-[#d4af37] p-5 rounded-r-xl shadow-xl">
                 <div class="flex justify-between items-center">
                     <div>
                         <p class="text-sm font-bold text-white uppercase tracking-tight">Apertura Piscina Municipal</p>
-                        <p class="text-[11px] text-gray-400 mt-1">Mañana a las 11:00h</p>
+                        <p class="text-[11px] text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> Mañana a las 11:00h</p>
                     </div>
-                    <i class="fas fa-bell gold-text text-lg"></i>
+                    <div class="bg-black/50 p-2 rounded-full">
+                        <i class="fas fa-bell gold-text text-lg"></i>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section>
             <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop');">
-                <span class="vip-tag">Cartas Digitales</span>
+                <span class="vip-tag">Pase VIP</span>
                 <div class="card-content">
                     <h3 class="text-2xl font-black uppercase italic text-white leading-none">
                         <i class="fas fa-utensils gold-text mr-2 text-xl"></i>Dónde Comer
                     </h3>
-                    <p class="text-[11px] text-gray-400 mt-1">Restaurantes, bares de tapas y platos típicos.</p>
+                    <p class="text-[11px] text-gray-400 mt-1">Cartas traducidas y recomendaciones del chef.</p>
                 </div>
             </div>
 
@@ -126,17 +132,17 @@
                     <h3 class="text-2xl font-black uppercase italic text-white leading-none">
                         <i class="fas fa-bed gold-text mr-2 text-xl"></i>Alojamiento
                     </h3>
-                    <p class="text-[11px] text-gray-400 mt-1">Hoteles, casas rurales y apartamentos.</p>
+                    <p class="text-[11px] text-gray-400 mt-1">Descansa en el corazón de la provincia.</p>
                 </div>
             </div>
 
             <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1628102422617-3c5200bec344?q=80&w=2070&auto=format&fit=crop');">
-                <span class="vip-tag">Ofertas</span>
+                <span class="vip-tag">Ofertas Locales</span>
                 <div class="card-content">
                     <h3 class="text-2xl font-black uppercase italic text-white leading-none">
                         <i class="fas fa-shopping-bag gold-text mr-2 text-xl"></i>Comercios
                     </h3>
-                    <p class="text-[11px] text-gray-400 mt-1">Productos locales y tiendas de Ardales.</p>
+                    <p class="text-[11px] text-gray-400 mt-1">Aceites, dulces artesanales y más.</p>
                 </div>
             </div>
 
@@ -145,7 +151,7 @@
                     <h3 class="text-2xl font-black uppercase italic text-white leading-none">
                         <i class="fas fa-map-marked-alt gold-text mr-2 text-xl"></i>Ocio y Rutas
                     </h3>
-                    <p class="text-[11px] text-gray-400 mt-1">Caminito del Rey, Cuevas y Pantanos.</p>
+                    <p class="text-[11px] text-gray-400 mt-1">Aventura en el Caminito y las Cuevas.</p>
                 </div>
             </div>
         </section>
@@ -153,9 +159,9 @@
     </main>
 
     <div class="fixed bottom-6 left-0 right-0 px-6 z-50">
-        <button class="btn-vip py-4 px-6 rounded-lg w-full shadow-2xl flex justify-between items-center uppercase text-sm tracking-tighter">
-            <span>Activar Pase del Visitante</span>
-            <i class="fas fa-id-card-alt text-lg"></i>
+        <button class="btn-vip py-4 px-6 rounded-xl w-full flex justify-between items-center uppercase text-sm tracking-tighter shadow-black shadow-2xl">
+            <span class="font-black">Activar mi Pase VIP</span>
+            <i class="fas fa-key text-lg"></i>
         </button>
     </div>
 
