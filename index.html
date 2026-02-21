@@ -9,13 +9,13 @@
     <style>
         body { background-color: #000; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
         
-        /* CIRUGÍA DE CABECERA: Adaptación perfecta de portadanew.jpg */
+        /* CABECERA CON LA NUEVA IMAGEN PROFESIONAL */
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), 
-                        url('portadanew.jpg');
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), 
+                        url('Portadadef.jpg');
             background-size: cover;
-            background-position: center 30%; /* Ajusta el enfoque de la foto */
-            height: 350px; /* Altura ideal para móviles/web en formato panorámico */
+            background-position: center 40%; 
+            height: 380px; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -68,6 +68,11 @@
             color: black;
             font-weight: 900;
         }
+
+        /* Sombra especial para legibilidad sobre foto profesional */
+        .text-shadow-vip {
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        }
     </style>
 </head>
 <body class="pb-28">
@@ -82,10 +87,10 @@
     </nav>
 
     <header class="hero-bg px-6">
-        <h1 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">
+        <h1 class="text-3xl md:text-5xl font-black uppercase tracking-tighter text-shadow-vip">
             BIENVENIDO A <span class="gold-text">ARDALES</span>
         </h1>
-        <p class="text-xs md:text-sm italic text-gray-200 mt-2 font-light tracking-wide shadow-black drop-shadow-lg">
+        <p class="text-xs md:text-sm italic text-gray-100 mt-2 font-medium tracking-wide text-shadow-vip">
             Tu información turística práctica y en tiempo real.
         </p>
     </header>
@@ -94,7 +99,7 @@
 
         <section class="mb-8">
             <h2 class="text-[10px] font-bold text-gray-500 uppercase tracking-[4px] mb-4">Próximos Eventos</h2>
-            <div class="bg-zinc-900/80 border-l-4 border-[#d4af37] p-5 rounded-r-xl">
+            <div class="bg-zinc-900/80 border-l-4 border-[#d4af37] p-5 rounded-r-xl shadow-lg">
                 <div class="flex justify-between items-center">
                     <div>
                         <p class="text-sm font-bold text-white uppercase tracking-tight">Apertura Piscina Municipal</p>
